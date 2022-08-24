@@ -36,7 +36,7 @@ jobs:
       - name: pulling git repo
         uses: actions/checkout@v3
       - name: run migrations
-        run: pg_dump -U user -h 127.0.0.1 -p 5432 > backup.sql
+        run: psql -d fastapi_test -U postgres -W
       - name: Install python version 3.10
         uses: actions/setup-python@v4
         with:
