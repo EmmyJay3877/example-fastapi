@@ -20,9 +20,9 @@ jobs:
       postgres:
         image: postgres:14
         env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: boluwatife
-          POSTGRES_DB: fastapi_test
+          POSTGRES_USER: ${{secrets.USERNAME}}
+          POSTGRES_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
+          POSTGRES_DB: ${{secrets.DATABASE_NAME}}
         ports:
           - 5432:5432
         options: >-
